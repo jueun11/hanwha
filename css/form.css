@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.tablet {
+  display: none;
+}
+
+.mobile {
+  display: none;
+}
+
+.pc {
+  display: block;
+}
+
+@keyframes focus {
+  from {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #362323;
+    color: #362323;
+  }
+  to {
+    background-color: #362323;
+    border: 1px solid #362323;
+    color: #fff;
+  }
+}
+:root {
+  --fontColor: #443227;
+  --fontColorGray: #847971;
+  --whiteColor: #fff;
+  --mainColor: #f37321;
+  --subColor_01: #f89b6c;
+  --subColor_02: #fbb584;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--fontColor);
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--fontColor);
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--fontColor);
+}
+
+p {
+  font-weight: 400;
+}
+
+.textLarge {
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+  color: var(--fontColor);
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.textMedium {
+  font-size: 14px;
+  line-height: 25px;
+  color: var(--fontColor);
+}
+
+.textSmall {
+  font-size: 11px;
+  line-height: 25px;
+  color: var(--fontColor);
+}
+
+.semiTitle {
+  font-weight: 100;
+  color: var(--mainColor);
+  margin-bottom: 12px;
+}
+
+span {
+  font-weight: 700;
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .pc {
+    display: none;
+  }
+  .mobile {
+    display: none;
+  }
+  .tablet {
+    display: block;
+  }
+  h1 {
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--fontColor);
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--fontColor);
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--fontColor);
+  }
+  p {
+    font-weight: 400;
+  }
+  .textLarge {
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 400;
+    color: var(--fontColor);
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .textMedium {
+    font-size: 14px;
+    line-height: 25px;
+    color: var(--fontColor);
+  }
+  .textSmall {
+    font-size: 11px;
+    line-height: 25px;
+    color: var(--fontColor);
+  }
+  .semiTitle {
+    font-weight: 100;
+    margin-bottom: 17px;
+  }
+  span {
+    font-weight: 700;
+  }
+}
+@media all and (max-width: 768px) {
+  .pc {
+    display: none;
+  }
+  .tablet {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  h1 {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--fontColor);
+  }
+  h2 {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--fontColor);
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--fontColor);
+  }
+  p {
+    font-weight: 700;
+  }
+  .textLarge {
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 400;
+    color: var(--fontColor);
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .textMedium {
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--fontColor);
+  }
+  .textSmall {
+    font-size: 11px;
+    line-height: 25px;
+    color: var(--fontColor);
+  }
+  .lineBlack {
+    width: 78px;
+    border-bottom: 1px solid #362323;
+    margin-top: 15px;
+  }
+  span {
+    font-weight: 700;
+  }
+}/*# sourceMappingURL=form.css.map */
