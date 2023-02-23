@@ -1,0 +1,420 @@
+// *pc
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  // ?메인 탑 배너 시작
+  & > #main_top {
+    width: 100vw;
+    height: 696px;
+    background-color: gainsboro;
+    margin-top: 64px;
+    & > div {
+      width: 100vw;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      & > div {
+        width: 1200px;
+        display: flex;
+        flex-direction: row;
+        margin-top: 280px;
+        & > div:nth-child(1) {
+          width: 4px;
+          height: 230px;
+          background-color: var(--whiteColor);
+        }
+        & > div:nth-child(2) {
+          margin-left: 42px;
+          & > h1:nth-child(1) {
+            font-weight: 100;
+            color: var(--whiteColor);
+            font-size: 72px;
+          }
+          & > h1:nth-child(2) {
+            font-weight: 400;
+            color: var(--whiteColor);
+            font-size: 72px;
+            margin-top: 10px;
+            & > span {
+              color: var(--mainColor);
+            }
+          }
+          & > p {
+            margin-top: 28px;
+            color: var(--whiteColor);
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+  // !메인 탑배너 끝
+  // ? 스크롤 아이콘
+  & > #scroll_icon {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    & > div {
+      padding: 62px 0;
+      width: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & > img {
+        width: 100%;
+      }
+    }
+  }
+  // ! 스크롤 아이콘
+  // ?부문 시작
+  & > #field {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 156px;
+    & > div {
+      width: 1200px;
+      & > div:nth-child(1) {
+        & > h1 {
+          text-align: center;
+        }
+      }
+      & > #field_list {
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+        & > div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          & > div:nth-child(1) {
+            width: 144px;
+            height: 144px;
+            border: 1px solid var(--subColor_02);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & > div {
+              border-radius: 50%;
+              width: 70%;
+              height: 70%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              & > img {
+                width: 100%;
+              }
+            }
+          }
+          & > h2 {
+            color: var(--mainColor);
+            font-weight: 500;
+            margin-top: 40px;
+            margin-bottom: 24px;
+          }
+          & > p {
+            text-align: center;
+            color: var(--fontColorGray);
+          }
+        }
+        & > div:nth-last-child(1) {
+          & > div:nth-child(1) {
+            & > div {
+              width: 60%;
+              height: 60%;
+            }
+          }
+        }
+      }
+    }
+  }
+  // !부문 끝
+}
+// *테블릿
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    width: 100vw;
+    overflow-x: hidden;
+    //? 탑배너
+    & > #main_top {
+      width: 100vw;
+      height: 696px;
+      background-color: gainsboro;
+      margin-top: 64px;
+      & > div {
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & > div {
+          width: 100%;
+          padding: 0 36px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-top: 0vh;
+          & > div:nth-child(1) {
+            width: 4px;
+            height: 210px;
+            background-color: var(--whiteColor);
+          }
+          & > div:nth-child(2) {
+            margin-left: 24px;
+            & > h1:nth-child(1) {
+              font-weight: 100;
+              color: var(--whiteColor);
+              font-size: 64px;
+            }
+            & > h1:nth-child(2) {
+              font-weight: 400;
+              color: var(--whiteColor);
+              font-size: 64px;
+              margin-top: 10px;
+              & > span {
+                color: var(--mainColor);
+              }
+            }
+            & > p {
+              margin-top: 28px;
+              color: var(--whiteColor);
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }
+    // !탑배너
+    // ? 스크롤 아이콘
+    & > #scroll_icon {
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      & > div {
+        padding: 62px 0;
+        width: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & > img {
+          width: 100%;
+        }
+      }
+    }
+    // ! 스크롤 아이콘
+    // ?부문 시작
+    & > #field {
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      padding: 0 36px;
+      padding-bottom: 128px;
+      & > div {
+        width: 100%;
+        & > div:nth-child(1) {
+          & > h1 {
+            text-align: center;
+          }
+        }
+        & > #field_list {
+          margin-top: 80px;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 24px;
+          & > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            & > div:nth-child(1) {
+              width: 144px;
+              height: 144px;
+              border: 1px solid var(--subColor_02);
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              & > div {
+                border-radius: 50%;
+                width: 70%;
+                height: 70%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                & > img {
+                  width: 100%;
+                }
+              }
+            }
+            & > h2 {
+              color: var(--mainColor);
+              font-weight: 500;
+              margin-top: 40px;
+              margin-bottom: 24px;
+            }
+            & > p {
+              font-size: 11px;
+              line-height: 20px;
+              text-align: center;
+              color: var(--fontColorGray);
+            }
+          }
+          & > div:nth-last-child(1) {
+            & > div:nth-child(1) {
+              & > div {
+                width: 60%;
+                height: 60%;
+              }
+            }
+          }
+        }
+      }
+    }
+    // !부문 끝
+  }
+}
+
+// *모바일
+@media all and (max-width: 768px) {
+  body {
+    width: 100vw;
+    overflow-x: hidden;
+    // ?메인 배너 시작
+    & > #main_top {
+      width: 100vw;
+      height: 400px;
+      background-color: gainsboro;
+      margin-top: 0px;
+      & > div {
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10vh;
+        & > div {
+          width: 100%;
+          padding: 0 24px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-top: 0vh;
+          & > div:nth-child(1) {
+            width: 2px;
+            height: 210px;
+            background-color: var(--whiteColor);
+          }
+          & > div:nth-child(2) {
+            margin-left: 16px;
+            & > h1:nth-child(1) {
+              font-weight: 100;
+              color: var(--whiteColor);
+              font-size: 24px;
+            }
+            & > h1:nth-child(2) {
+              font-weight: 400;
+              color: var(--whiteColor);
+              font-size: 24px;
+              margin-top: 10px;
+              & > span {
+                color: var(--mainColor);
+              }
+            }
+            & > p {
+              margin-top: 5vh;
+              color: var(--whiteColor);
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }
+    // !메인 배너 끝
+    // ? 스크롤 아이콘
+    & > #scroll_icon {
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      & > div {
+        padding: 28px 0;
+        width: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & > img {
+          width: 100%;
+        }
+      }
+    }
+    // ! 스크롤 아이콘
+    // ?부문 시작
+    & > #field {
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      padding: 0 24px;
+      padding-bottom: 56px;
+      & > div {
+        width: 100%;
+        & > div:nth-child(1) {
+          & > h1 {
+            text-align: center;
+          }
+        }
+        & > #field_list {
+          margin-top: 42px;
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 50px;
+          & > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            & > div:nth-child(1) {
+              width: 100px;
+              height: 100px;
+              border: 1px solid var(--subColor_02);
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              & > div {
+                border-radius: 50%;
+                width: 70%;
+                height: 70%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                & > img {
+                  width: 100%;
+                }
+              }
+            }
+            & > h2 {
+              color: var(--mainColor);
+              font-weight: 500;
+              margin-top: 25px;
+              margin-bottom: 16px;
+            }
+            & > p {
+              font-size: 12px;
+              line-height: 20px;
+              text-align: center;
+              color: var(--fontColorGray);
+            }
+          }
+          & > div:nth-last-child(1) {
+            & > div:nth-child(1) {
+              & > div {
+                width: 60%;
+                height: 60%;
+              }
+            }
+          }
+        }
+      }
+    }
+    // !부문 끝
+  }
+}
