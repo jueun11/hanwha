@@ -1,0 +1,82 @@
+//* pc
+#pc_grid {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 50;
+  position: fixed;
+  & > div {
+    width: 1200px;
+    height: 100vh;
+    border: 1px solid rgb(0, 255, 115);
+    display: flex;
+    justify-content: space-between;
+    & > div {
+      width: 78px;
+      background-color: rgba(255, 196, 196, 0.4);
+    }
+  }
+}
+
+//* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1024px)
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  #pc_grid {
+    display: none;
+  }
+  #tablet_grid {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 50;
+    position: fixed;
+    top: 0;
+    & > div {
+      display: grid;
+      width: 100vw;
+      margin-left: 36px;
+      margin-right: 36px;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 24px;
+      height: 100vh;
+      border: 1px solid rgb(213, 232, 237);
+      & > div {
+        background-color: rgba(255, 196, 196, 0.4);
+      }
+    }
+  }
+}
+
+//* 모바일
+@media all and (max-width: 768px) {
+  #pc_grid {
+    display: none;
+  }
+  #tablet_grid {
+    display: none;
+  }
+  #mobile_grid {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 50;
+    position: fixed;
+    top: 0;
+    left: 0;
+    & > div {
+      margin-left: 24px;
+      margin-right: 24px;
+      display: grid;
+      width: 100vw;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 24px;
+      height: 100vh;
+      border: 1px solid rgb(213, 232, 237);
+      & > div {
+        background-color: rgba(255, 196, 196, 0.4);
+      }
+    }
+  }
+}
