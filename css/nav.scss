@@ -1,0 +1,423 @@
+//todo pc
+.navTransition {
+  transition: all 0.3s ease;
+}
+.pc_nav_hh {
+  display: none;
+}
+.pc_nav_found {
+  display: none;
+}
+#header {
+  display: flex;
+  overflow: hidden;
+  top: 0;
+  justify-content: center;
+  position: fixed;
+  z-index: 2;
+  width: 100vw;
+  height: 64px;
+  background-color: #fff;
+  box-shadow: 3px 3px 10px 10px rgba(0, 0, 0, 0.05);
+  & > #pc_menu {
+    display: block;
+    overflow: hidden;
+    background-color: #fff;
+    & > #pc_menu_line {
+      opacity: 0;
+      position: fixed;
+      top: 64px;
+      left: 0;
+      width: 100vw;
+      height: 1px;
+      background-color: #888888;
+      transition: 0.2s;
+    }
+    & > #pc_move_site {
+      align-items: center;
+      position: fixed;
+      top: 16px;
+      left: 1666px;
+      & > div:nth-child(1) {
+        border: 1px solid #888888;
+        width: 190px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 12px;
+        & > a {
+          font-size: 15px;
+          color: #888888;
+        }
+        & > i {
+          font-size: 24px;
+          margin-top: 3px;
+          color: var(--mainColor);
+        }
+      }
+      & > ul {
+        border: 1px solid #888;
+        border-top: none;
+        background-color: #fff;
+        display: none;
+        & > li {
+          padding: 8px 12px;
+          & > a {
+            font-size: 14px;
+            color: #888888;
+          }
+        }
+        & > li:hover {
+          background-color: var(--mainColor);
+          & > a {
+            color: var(--whiteColor);
+          }
+        }
+      }
+    }
+    & > ul {
+      display: flex;
+      justify-content: flex-end;
+      width: 1440px;
+      & > li {
+        width: 182px;
+        padding: 24px 0;
+        & > a {
+          font-weight: 400;
+          font-size: 15px;
+          color: var(--fontColor);
+        }
+        & > a:hover {
+          color: #f37321;
+          transition: 0.3s;
+        }
+        & > ul {
+          //드롭되는 세부 메뉴입니다.
+          display: flex;
+          padding-top: 16px;
+          padding-bottom: 16px;
+          display: none;
+          flex-direction: column;
+          overflow: hidden;
+          margin-top: 16px;
+          & > li {
+            padding: 12px 0;
+            font-weight: 400;
+            font-size: 14px;
+            & > a {
+              color: #444;
+            }
+            & > a:hover {
+              color: #f37321;
+            }
+          }
+        }
+      }
+    }
+  }
+  & > #tablet_mobile_menu {
+    display: none;
+  }
+}
+
+#pc_logo {
+  width: 130px;
+  align-items: center;
+  position: fixed;
+  top: 16px;
+  left: 64px;
+  & > a {
+    & > img {
+      width: 100%;
+    }
+  }
+}
+
+//todo 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1024px)
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  #header {
+    height: inherit;
+    height: 64px;
+    box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & > #pc_menu {
+      display: none;
+    }
+    & > #tablet_mobile_menu {
+      display: block;
+      overflow: hidden;
+      width: 100vw;
+      & > #tablet_mobile_menu_off {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60%;
+        margin: 0 36px;
+        & > #tablet_mobile_logo {
+          height: 36px;
+          overflow: hidden;
+          margin-left: -12px;
+          & > img {
+            height: 100%;
+          }
+        }
+        & > .hamburger_menu {
+          height: 24px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-end;
+          & > div {
+            width: 36px;
+            height: 4px;
+            border-radius: 15px;
+            background-color: #f37321;
+          }
+        }
+      }
+      & > #tablet_mobile_menu_on {
+        top: 0;
+        z-index: 2;
+        left: 100vw;
+        position: fixed;
+        // display: none;
+        & > #tablet_mobile_menu_bg {
+          top: 0;
+          position: fixed;
+          width: 100vw;
+          height: 100vh;
+          background-color: rgb(0, 0, 0);
+          opacity: 0;
+          transition: 1s;
+          transition-property: background-color;
+        }
+        & > #tablet_mobile_menu_list {
+          display: flex;
+          opacity: 0;
+          flex-direction: column;
+          align-items: center;
+          left: 100vw;
+          z-index: 3;
+          top: 0;
+          position: fixed;
+          width: 65vw;
+          height: 100vh;
+          background-color: #fbb584;
+          transition: 0.5s;
+          transition-property: left;
+          & > div {
+            top: 12px;
+            right: 36px;
+            position: absolute;
+          }
+          & > .menuClose {
+            & > i {
+              font-size: 40px;
+              color: var(--whiteColor);
+            }
+          }
+          & > ul {
+            width: 65vw;
+            margin-top: 15vh;
+            overflow-y: scroll;
+            -ms-overflow-style: none; /* 인터넷 익스플로러 */
+            scrollbar-width: none; /* 파이어폭스 */
+            & > li {
+              padding: 24px 32px;
+              transition-property: background-color;
+              transition: 0.5s;
+              & > div {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 15px;
+                & > a {
+                  color: var(--whiteColor);
+                }
+                & > .tablet_mobile_menu_arrow_btn {
+                  width: 30px;
+                  transition: 0.2s;
+                  border: 1px solid rgb(255, 0, 0, 0);
+                  background-image: none;
+                  background-color: rgb(139, 136, 184, 0);
+                  & > img {
+                    width: 80%;
+                  }
+                }
+              }
+              & > ul {
+                display: none;
+                flex-direction: column;
+                margin-top: 2vh;
+                & > li {
+                  margin-top: 1vh;
+                  margin-bottom: 1vh;
+                  padding: 10px;
+                  & > a {
+                    font-size: 14px;
+                    color: var(--whiteColor);
+                  }
+                }
+                & > #tablet_mobile_nav_line {
+                  margin-top: 3vh;
+                  margin-bottom: 3vh;
+                  width: inherit;
+                  height: 1px;
+                  background-color: #000;
+                }
+              }
+            }
+          }
+          & > ul::-webkit-scrollbar {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+//todo 모바일
+@media all and (max-width: 767px) {
+  #header {
+    height: inherit;
+    box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.05);
+    & > #pc_menu {
+      display: none;
+    }
+    & > #tablet_mobile_menu {
+      display: block;
+      overflow: hidden;
+      width: 100vw;
+      & > #tablet_mobile_menu_off {
+        display: flex;
+        justify-content: space-between;
+        height: 2vh;
+        margin: 16px;
+        align-items: center;
+        & > #tablet_mobile_logo {
+          height: 3vh;
+          overflow: hidden;
+          & > img {
+            height: 100%;
+          }
+        }
+        & > .hamburger_menu {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-end;
+          & > div {
+            width: 24px;
+            height: 2px;
+            border-radius: 15px;
+            background-color: #f37321;
+          }
+        }
+      }
+      & > #tablet_mobile_menu_on {
+        top: 0;
+        z-index: 2;
+        left: 100vw;
+        position: fixed;
+        & > #tablet_mobile_menu_bg {
+          top: 0;
+          position: fixed;
+          width: 100vw;
+          height: 100vh;
+          background-color: rgb(0, 0, 0);
+          opacity: 0;
+          transition: 1s;
+          transition-property: background-color;
+        }
+        & > #tablet_mobile_menu_list {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          left: 100vw;
+          z-index: 3;
+          top: 0;
+          position: fixed;
+          width: 100vw;
+          height: 100vh;
+          background-color: var(--subColor_02);
+          transition: 0.5s;
+          transition-property: left;
+          // border: 1px solid red;
+          & > div {
+            top: 8px;
+            right: 16px;
+            position: absolute;
+          }
+          & > .menuClose {
+            & > i {
+              font-size: 32px;
+              color: var(--whiteColor);
+            }
+          }
+          & > ul {
+            width: 100vw;
+            margin-top: 15vh;
+            overflow: scroll;
+            -ms-overflow-style: none; /* 인터넷 익스플로러 */
+            scrollbar-width: none; /* 파이어폭스 */
+            & > li {
+              padding: 3vh;
+              padding: 2vh 16px;
+              font-size: 14px;
+              transition-property: background-color;
+              transition: 0.5s;
+              & > div {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                & > a {
+                  color: var(--whiteColor);
+                }
+                & > .tablet_mobile_menu_arrow_btn {
+                  width: 22px;
+                  transition: 0.2s;
+                  border: 1px solid rgb(255, 0, 0, 0);
+                  background-image: none;
+                  background-color: rgb(139, 136, 184, 0);
+                  background-color: rgb(139, 136, 184, 0);
+                  & > img {
+                    width: 100%;
+                  }
+                }
+              }
+              & > ul {
+                display: none;
+                flex-direction: column;
+                margin-top: 2vh;
+                & > li {
+                  margin-top: 1vh;
+                  margin-bottom: 1vh;
+                  padding: 10px;
+                  & > a {
+                    font-size: 11px;
+                    color: var(--whiteColor);
+                  }
+                }
+                & > #tablet_mobile_nav_line {
+                  margin-top: 3vh;
+                  margin-bottom: 3vh;
+                  width: inherit;
+                  height: 1px;
+                  background-color: rgb(0, 0, 0);
+                }
+              }
+            }
+          }
+          & > ul::-webkit-scrollbar {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
