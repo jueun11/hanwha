@@ -80,7 +80,7 @@ p {
 }
 
 .textSmall {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 25px;
   color: var(--fontColor);
 }
@@ -173,7 +173,7 @@ span {
     color: var(--fontColor);
   }
   h3 {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 400;
     color: var(--fontColor);
   }
