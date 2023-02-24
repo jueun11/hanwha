@@ -37,7 +37,7 @@
 
 h1 {
   font-size: 36px;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--fontColor);
 }
 
@@ -53,12 +53,16 @@ h3 {
   color: var(--fontColor);
 }
 p {
-  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 300;
+  color: var(--fontColor);
+  font-family: "Noto Sans KR", sans-serif;
 }
 .textLarge {
   font-size: 15px;
   line-height: 25px;
-  font-weight: 400;
+  font-weight: 300;
   color: var(--fontColor);
   font-family: "Noto Sans KR", sans-serif;
 }
@@ -81,6 +85,7 @@ p {
 }
 .title {
   // margin-top: 12px;
+  font-weight: 400;
 }
 span {
   font-weight: 700;
@@ -115,7 +120,7 @@ span {
     color: var(--fontColor);
   }
   p {
-    font-weight: 400;
+    font-weight: 300;
   }
   .textLarge {
     font-size: 14px;
@@ -126,13 +131,13 @@ span {
   }
 
   .textMedium {
-    font-size: 14px;
-    line-height: 25px;
+    font-size: 13px;
+    line-height: 23px;
     color: var(--fontColor);
   }
   .textSmall {
     font-size: 11px;
-    line-height: 25px;
+    line-height: 20px;
     color: var(--fontColor);
   }
   .semiTitle {
@@ -177,11 +182,14 @@ span {
     color: var(--fontColor);
   }
   p {
-    font-weight: 700;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 23px;
+    font-family: "Noto Sans KR", sans-serif;
   }
   .textLarge {
-    font-size: 15px;
-    line-height: 25px;
+    font-size: 13px;
+    line-height: 23px;
     font-weight: 400;
     color: var(--fontColor);
     font-family: "Noto Sans KR", sans-serif;
@@ -193,8 +201,8 @@ span {
     color: var(--fontColor);
   }
   .textSmall {
-    font-size: 11px;
-    line-height: 25px;
+    font-size: 9px;
+    line-height: 15px;
     color: var(--fontColor);
   }
   .lineBlack {
