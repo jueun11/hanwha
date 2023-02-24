@@ -276,6 +276,76 @@ body {
     }
   }
   // ! management 끝
+  // ? media center 시작
+  & > #media_center {
+    width: 100vw;
+    padding: 156px 0;
+    display: flex;
+    justify-content: center;
+    & > div {
+      width: 1200px;
+      & > div:nth-child(1) {
+        width: 130px;
+        height: 110px;
+        background-color: var(--mainColor);
+        z-index: -1;
+        position: absolute;
+        margin-top: 140px;
+        margin-left: -24px;
+      }
+      & > div:nth-child(2) {
+        & > h1 {
+          text-align: center;
+        }
+      }
+      & > div:nth-child(3) {
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 24px;
+        & > div {
+          border: 1px solid #dedede;
+          box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
+          & > div:nth-child(1) {
+            height: 284px;
+            background-size: cover;
+            background-position: center;
+          }
+          & > div:nth-child(2) {
+            padding: 16px;
+            & > a {
+              display: flex;
+              justify-content: flex-end;
+              & > img {
+                margin-top: 4px;
+              }
+            }
+          }
+        }
+        & > div:nth-child(1) {
+          & > div:nth-child(1) {
+            background-image: url("../img/media_01.jpeg");
+          }
+        }
+        & > div:nth-child(2) {
+          & > div:nth-child(1) {
+            background-image: url("../img/media_02.jpg");
+          }
+        }
+        & > div:nth-child(3) {
+          & > div:nth-child(1) {
+            background-image: url("../img/media_03.jpg");
+          }
+        }
+        & > div:nth-child(4) {
+          & > div:nth-child(1) {
+            background-image: url("../img/media_04.jpeg");
+          }
+        }
+      }
+    }
+  }
+  // ! media center 끝
 }
 // *테블릿
 @media all and (min-width: 768px) and (max-width: 1024px) {
@@ -564,6 +634,77 @@ body {
       }
     }
     // ! management 끝
+    // ? media center 시작
+    & > #media_center {
+      width: 100vw;
+      padding: 128px 36px;
+      display: flex;
+      justify-content: center;
+      & > div {
+        width: 100%;
+        & > div:nth-child(1) {
+          width: 130px;
+          height: 110px;
+          background-color: var(--mainColor);
+          z-index: -1;
+          position: absolute;
+          margin-top: 140px;
+          margin-left: -24px;
+        }
+        & > div:nth-child(2) {
+          & > h1 {
+            text-align: center;
+          }
+        }
+        & > div:nth-child(3) {
+          margin-top: 80px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr;
+          gap: 24px;
+          & > div {
+            border: 1px solid #dedede;
+            box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
+            & > div:nth-child(1) {
+              height: 380px;
+              background-size: cover;
+              background-position: center;
+            }
+            & > div:nth-child(2) {
+              padding: 16px;
+              & > a {
+                display: flex;
+                justify-content: flex-end;
+                & > img {
+                  margin-top: 4px;
+                }
+              }
+            }
+          }
+          & > div:nth-child(1) {
+            & > div:nth-child(1) {
+              background-image: url("../img/media_01.jpeg");
+            }
+          }
+          & > div:nth-child(2) {
+            & > div:nth-child(1) {
+              background-image: url("../img/media_02.jpg");
+            }
+          }
+          & > div:nth-child(3) {
+            & > div:nth-child(1) {
+              background-image: url("../img/media_03.jpg");
+            }
+          }
+          & > div:nth-child(4) {
+            & > div:nth-child(1) {
+              background-image: url("../img/media_04.jpeg");
+            }
+          }
+        }
+      }
+    }
+    // ! media center 끝
   }
 }
 
@@ -855,5 +996,77 @@ body {
       }
     }
     // ! management 끝
+    // ? media center 시작
+    & > #media_center {
+      width: 100vw;
+      padding: 56px 24px;
+      display: flex;
+      justify-content: center;
+      & > div {
+        width: 100%;
+        & > div:nth-child(1) {
+          width: 130px;
+          height: 110px;
+          background-color: var(--mainColor);
+          z-index: -1;
+          position: absolute;
+          margin-top: 80px;
+          margin-left: -12px;
+        }
+        & > div:nth-child(2) {
+          & > h1 {
+            text-align: center;
+          }
+        }
+        & > div:nth-child(3) {
+          margin-top: 42px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr;
+          gap: 24px;
+          & > div {
+            border: 1px solid #dedede;
+            box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
+            & > div:nth-child(1) {
+              height: 115px;
+              background-size: cover;
+              background-position: center;
+            }
+            & > div:nth-child(2) {
+              padding: 16px;
+              & > a {
+                display: flex;
+                justify-content: flex-end;
+                & > img {
+                  width: 16px;
+                  margin-top: 4px;
+                }
+              }
+            }
+          }
+          & > div:nth-child(1) {
+            & > div:nth-child(1) {
+              background-image: url("../img/media_01.jpeg");
+            }
+          }
+          & > div:nth-child(2) {
+            & > div:nth-child(1) {
+              background-image: url("../img/media_02.jpg");
+            }
+          }
+          & > div:nth-child(3) {
+            & > div:nth-child(1) {
+              background-image: url("../img/media_03.jpg");
+            }
+          }
+          & > div:nth-child(4) {
+            & > div:nth-child(1) {
+              background-image: url("../img/media_04.jpeg");
+            }
+          }
+        }
+      }
+    }
+    // ! media center 끝
   }
 }
