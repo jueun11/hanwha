@@ -313,11 +313,16 @@ body {
           }
           & > div:nth-child(2) {
             padding: 16px;
-            & > a {
-              display: flex;
-              justify-content: flex-end;
-              & > img {
-                margin-top: 4px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            & > div:nth-child(2) {
+              & > a {
+                display: flex;
+                justify-content: flex-end;
+                & > img {
+                  margin-top: 4px;
+                }
               }
             }
           }
@@ -806,11 +811,16 @@ body {
             }
             & > div:nth-child(2) {
               padding: 16px;
-              & > a {
-                display: flex;
-                justify-content: flex-end;
-                & > img {
-                  margin-top: 4px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              & > div:nth-child(2) {
+                & > a {
+                  display: flex;
+                  justify-content: flex-end;
+                  & > img {
+                    margin-top: 4px;
+                  }
                 }
               }
             }
@@ -1302,13 +1312,20 @@ body {
               background-position: center;
             }
             & > div:nth-child(2) {
+              height: 150px;
               padding: 16px;
-              & > a {
-                display: flex;
-                justify-content: flex-end;
-                & > img {
-                  width: 16px;
-                  margin-top: 4px;
+              display: flex;
+              flex-direction: column;
+              align-content: space-between;
+              justify-content: space-between;
+              & > div:nth-child(2) {
+                & > a {
+                  display: flex;
+                  justify-content: flex-end;
+                  & > img {
+                    width: 16px;
+                    margin-top: 4px;
+                  }
                 }
               }
             }
