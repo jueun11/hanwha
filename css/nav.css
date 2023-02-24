@@ -364,7 +364,7 @@
   #header > #tablet_mobile_menu > #tablet_mobile_menu_on > #tablet_mobile_menu_list > ul > li {
     padding: 3vh;
     padding: 2vh 16px;
-    font-size: 14px;
+    font-size: 16px;
     transition-property: background-color;
     transition: 0.5s;
   }
@@ -398,7 +398,7 @@
     padding: 10px;
   }
   #header > #tablet_mobile_menu > #tablet_mobile_menu_on > #tablet_mobile_menu_list > ul > li > ul > li > a {
-    font-size: 11px;
+    font-size: 14px;
     color: var(--whiteColor);
   }
   #header > #tablet_mobile_menu > #tablet_mobile_menu_on > #tablet_mobile_menu_list > ul > li > ul > #tablet_mobile_nav_line {
