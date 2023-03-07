@@ -126,9 +126,11 @@ for (let i = 0; i < MenuClose.length; i++) {
 }
 
 //*타블렛, 모바일 메뉴 더보기
-
 const tabletMenuArrowBtn = Array.from(
   document.getElementsByClassName("tablet_mobile_menu_arrow_btn")
+);
+const tabletMenuBtn = Array.from(
+  document.getElementsByClassName("menu_arrow_btn")
 );
 const tabletMenuMore = Array.from(
   document.getElementsByClassName("tablet_mobile_menu_more")
@@ -140,20 +142,20 @@ console.log(tabletMenuFirstLi);
 let menuClickArray = [0, 0, 0, 0, 0, 0];
 
 for (let i = 0; i < tabletMenuArrowBtn.length; i++) {
-  tabletMenuArrowBtn[i].addEventListener("click", function () {
+  tabletMenuBtn[i].addEventListener("click", function () {
     tabletMenuMore[i].style.display = "block";
   });
-  tabletMenuArrowBtn[i].addEventListener("click", function () {
+  tabletMenuBtn[i].addEventListener("click", function () {
     if (menuClickArray[i] === 0) {
       tabletMenuMore[i].style.display = "block";
-      tabletMenuFirstLi[i].style.backgroundColor = "#f89b6c";
+      tabletMenuFirstLi[i].style.backgroundColor = "#f37321";
       menuClickArray[i]++;
       tabletMenuArrowBtn[i].style.transform = "scaleY(-1)";
     } else {
       menuClickArray[i] = 0;
       tabletMenuMore[i].style.display = "none";
       tabletMenuArrowBtn[i].style.transform = "scaleY(1)";
-      tabletMenuFirstLi[i].style.backgroundColor = "#fbb584";
+      tabletMenuFirstLi[i].style.backgroundColor = "#f89b6c";
     }
   });
 }
